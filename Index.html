@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #282c34;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: black;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .about-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 40px);
+            text-align: center;
+            flex-direction: column;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .about-section h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        .about-section p {
+            font-size: 1.5em;
+            max-width: 800px;
+        }
+
+        #Projects {
+            background-color: gray;
+            width: 100%;
+            padding-top: 40px;
+            padding: 20px;
+        }
+
+        #Projects h1 {
+            font-size: 4em; /* Increased font size for "Projects" */
+            margin-bottom: 40px; /* Adjusted margin if needed */
+        }
+
+        .project {
+            display: flex;
+            align-items: center; /* Center items vertically */
+            margin-bottom: 250px; /* Increased margin-bottom to create more space between projects */
+            justify-content: center; /* Center items horizontally */
+            position: relative;
+            padding: 0 200px; /* Padding for inner content */
+        }
+
+        .project-text {
+            flex: 1;
+            padding-right: 10px; /* Reduced padding-right to bring text closer */
+            position: relative;
+            z-index: 1;
+            margin-right: -10px; /* Reduced margin-right to overlap less */
+        }
+
+
+        .project-title {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: white;
+            text-decoration: none; /* Removes underline */
+        }
+
+        .project-title:hover {
+            text-decoration: underline; /* Optional: underline on hover */
+        }
+
+        .project-description {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .project img {
+            max-width: 35%; /* Adjust size as needed */
+            height: auto;
+            border: 50px solid black; /* Remove white border */
+            background-color: black; /* Set the background color to black */
+            position: relative;
+            z-index: 0;
+            margin-left: 0; /* Removed negative margin to align properly */
+        }
+
+        .anylogic-logo {
+            border: none !important; /* Remove the border */
+            background-color: transparent !important; /* Ensure no background color */
+            margin-top: -150px; /* Move the image 150px up */
+
+        }
+        .python-logo {
+            border: none !important; /* Remove the border */
+            background-color: transparent !important; /* Ensure no background color */
+            margin-top: -100px;
+
+        }
+        .api-logo {
+            border: none !important; /* Remove the border */
+            background-color: transparent !important; /* Ensure no background color */
+            margin-left: -1000px; /* Move the image 150px up */
+
+        }
+
+        #Contact {
+            background-color: black;
+            width: 100%;
+            height: 300px;
+            padding-top: 40px;
+        }
+
+        #Contact h1 {
+            color: white;
+        }
+
+        #Contact p {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="#About">Home</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Contact">Contact</a>
+        <a href="https://drive.google.com/file/d/1hFows-J-D8YmR7owzNps94cmh3fv4hOl/view?usp=drive_link" target="_blank">Resume</a>
+    </nav>
+</header>
+
+<div class="about-section" id="About">
+    <h1>About</h1>
+    <p>Jaden M-A, Clark Scholar and second-year Computer Science student in the School of Engineering and Applied Science at the University of Virginia</p>
+</div>
+
+<div id="Projects">
+    <h1>Projects</h1>
+    <div class="project">
+        <div class="project-text">
+            <a href="Flow.html" class="project-title" target="_blank">AnyLogic Cafeteria Flow Simulation</a>
+            <p class="project-description">Developed two AnyLogic models to simulate a local private school's cafeteria <br>congestion issues along with our proposed solution.<br><br> <br> <br> <br></p>
+            <img src="anylogic-removebg-preview.png" alt="AnyLogic Logo" style="width: 200% !important; height: auto !important;" class = anylogic-logo>
+        </div>
+        <img src="1aaa.png" alt="Screenshot of AnyLogic Cafeteria Flow Simulation">
+    </div>
+
+    <div class="project">
+        <div class="project-text">
+            <a href="https://colab.research.google.com/drive/1TthSCu27xX0_uT0v7lmgQNeW5FIuZre-?usp=sharing" class="project-title" target="_blank">Collage Generator</a>
+            <p class="project-description">A program that downloads image responses from a Google Sheets document connected to a <br> Google Form  and automatically formats them into a collage.<br></p>
+            <img src="Google API Logo.png" alt="APi" class="api-logo">
+            <br>
+            <br>
+            <br>
+            <img src="python_logo-removebg-preview.png" alt="Python Logo" class="python-logo">
+        </div>
+        <img src="collage.png" alt="Screenshot of Collage Generator">
+    </div>
+
+    <div class="project">
+        <div class="project-text">
+            <a href="game.html" class="project-title" target="_blank">Space Invader Inspired Video Game</a>
+            <p class="project-description">Fixed shooter system game with infinite levels and a start over mechanism. Created as a final project for a programming course.<br><br> <br> <br> <br></p>
+            <br>
+            <br>
+            <br>
+            <img src="python_logo-removebg-preview.png" alt="Python Logo" class="anylogic-logo">
+        </div>
+        <img src="Screenshot 2024-08-04 231929.png" alt="Screenshot of Space Invader Inspired Video Game">
+    </div>
+</div>
+
+
+<div id="Contact">
+    <h1>Contact</h1>
+    <p>Email: jmagyekum@gmail.com</p>
+    <p>Phone Number: 540-214-1431</p>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
